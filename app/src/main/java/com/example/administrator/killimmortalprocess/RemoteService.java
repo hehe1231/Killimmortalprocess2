@@ -65,6 +65,7 @@ public class RemoteService extends Service {
 
         @Override
         public void onServiceDisconnected(ComponentName name) {
+
             //该方法会在绑定的服务断开连接时调用,绑定的服务被强杀的时候也会被调用
             //在强杀后服务,重新启动服务
             startService(new Intent(RemoteService.this, LocalService.class));
